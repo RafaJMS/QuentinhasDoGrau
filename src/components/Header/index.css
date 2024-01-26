@@ -1,0 +1,25 @@
+.header-box{
+    background-color: darkolivegreen;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+}
+
+.titleheader-box{
+    padding: 1rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.headertype-box{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.title-img{
+    width: 40px;
+}
