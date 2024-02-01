@@ -5,7 +5,7 @@ export default function Header(){
         
         <div className="header-box">
            <div className="titleheader-box">
-         <img className="title-img" src="src\assets\svgrepo.svg"></img>
+         <img className="title-img" src="./src/assets/svgrepo.svg"></img>
             <span className="title-header">Quentinhas do Grau</span>
            </div>
            
