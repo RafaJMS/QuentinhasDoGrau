@@ -8,7 +8,8 @@ export default function Cards(){
         Nome:'Batata Palha',
         Preco: `R$${6}`,
         Descricao: 'Comida gostosa',
-        Refeicao: "Almoço"
+        Refeicao: "Almoço",
+        Imagem: 'https://www.receitasdeculinaria.tv/wp-content/uploads/2023/01/batata-palha-750x536.jpg',
     },{
         Nome:'Batata Frita',
         Preco: `R$${13}`,
@@ -28,11 +29,18 @@ export default function Cards(){
     
     
         return(
-            <div>
+            <div className='box-comida'>
                 {comidas.map((comida)=> (
-                     <div className='comida' key={1}>
+                    <>
+                    <a id='link-comida' target='_blank' href='https://www.google.com.br/?hl=pt-BR'><div className='comida' key={1}>
+                     <img className='comida-imagem' src={comida.Imagem}></img>
                      <span className='comida-nome'>{comida.Nome}</span>
-                 </div>
+                     <span className='comida-preco'>{comida.Preco}</span>
+                     <span className='comida-descricao'>{comida.Descricao}</span>
+                     <span className='comida-refeicao'>{comida.Refeicao}</span>
+                 </div></a>
+                     
+                 </>
 
                 )
             )}

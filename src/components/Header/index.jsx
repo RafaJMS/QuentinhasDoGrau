@@ -13,6 +13,7 @@ export default function Header(){
             <span className="type-header">Café da Manhã</span>
             <span className="type-header">Almoço</span>
             <span className="type-header">Jantar</span>
+            <span className="type-header">Sobremesas</span>           
            </div>
            
         </div>
