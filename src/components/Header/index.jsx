@@ -1,4 +1,5 @@
 import "../Header/index.css"
+import { Link } from "react-router-dom"
 
 export default function Header(){
     return(
@@ -10,10 +11,11 @@ export default function Header(){
            </div>
            
            <div className="headertype-box">
-            <span className="type-header">Café da Manhã</span>
-            <span className="type-header">Almoço</span>
-            <span className="type-header">Jantar</span>
-            <span className="type-header">Sobremesas</span>           
+           <Link to={"/cafe"}><span className="type-header">Café da Manhã</span></Link>
+            <Link to={"/almoco"}><span className="type-header">Almoço</span></Link>
+            <Link to={"/jantar"}><span className="type-header">Jantar</span></Link>
+            <Link to={"/sobremesas"}><span className="type-header">Sobremesas</span></Link>   
+            <Link to={"/bebidas"}><span className="type-header">Bebidas</span> </Link>        
            </div>
            
         </div>
