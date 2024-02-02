@@ -1,3 +1,4 @@
+
 .header-box{
     background-color: white;
     display: flex;
@@ -7,6 +8,8 @@
     align-items: center;
     border-bottom: 1px solid black;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.486);
+    box-sizing: content-box;
+
 }
 
 .titleheader-box{
@@ -15,7 +18,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-   
+    
 }
 
 .headertype-box{
@@ -25,11 +28,14 @@
     width: 65%;
     font-size: 18px;
     text-decoration: none;
+    text-overflow: clip;
+    overflow: hidden;
 }
 
 .title-header{
     font-size: 1.3rem;
     font-weight: 600;
+    text-overflow: clip;
 }
 
 .title-img{
@@ -40,6 +46,7 @@
     transition: all 0.3s;
     text-decoration: none;
     color: black;
+    text-overflow: clip;
 }
 
 #icon-link:hover{
@@ -53,6 +60,8 @@
     transition: all 0.3s;
     text-decoration: none;
     padding: 12px;
+    padding-block: 18px;
+    font-size: 17px
 }
 
 #type-link:hover{
