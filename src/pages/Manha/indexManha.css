@@ -37,6 +37,24 @@
     border-radius: 1rem;
 }
 
+.comida-nome{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.comida-preco{
+    font-size: 1.15rem;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    color: forestgreen;
+    padding: 8px;
+    border-radius: 1rem;
+}
+
+.comida-refeicao{
+    font-size: 18px;
+}
+
 .cafe-title{
     display: flex;
     text-align: center;
@@ -46,10 +64,10 @@
     background-color: rgb(26, 25, 25);
 }
 
-#title{
-    background-color: white;
+#cafe-title{
+    background-color: darkolivegreen;
     padding: 10px;
-    color: black;
+    color: whitesmoke;
     font-size: 27px;
     border-radius: 1rem;
     width: 80%;

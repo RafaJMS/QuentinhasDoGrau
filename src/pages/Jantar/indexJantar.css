@@ -37,7 +37,25 @@
     border-radius: 1rem;
 }
 
-.cafe-title{
+.comida-nome{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.comida-preco{
+    font-size: 1.15rem;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    color: forestgreen;
+    padding: 8px;
+    border-radius: 1rem;
+}
+
+.comida-refeicao{
+    font-size: 18px;
+}
+
+.jantar-title{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -47,9 +65,9 @@
 }
 
 #title{
-    background-color: white;
+    background-color: rgb(16, 46, 2);
     padding: 10px;
-    color: black;
+    color: whitesmoke;
     font-size: 27px;
     border-radius: 1rem;
     width: 80%;

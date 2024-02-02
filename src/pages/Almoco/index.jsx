@@ -1,40 +1,40 @@
-import { useEffect, useState } from 'react'
-import './index.css'
+import { useEffect} from 'react'
+import './indexAlmoco.css'
 
 export default function Almoco(){
 
     const comidas =[ {
 
-        Nome:'Misto Quente',
-        Preco: `R$${8}`,
-        Descricao: 'Pão com manteiga, recheado com queijo e peito de peru.',
-        Imagem: 'https://t2.uc.ltmcdn.com/pt/posts/4/6/0/como_fazer_um_misto_quente_24064_orig.jpg',
+        Nome:'Frango a Parmegiana',
+        Preco: `R$ 38 / 49 / 60`,
+        Refeicao: 'Frango a parmegiana com molho de tomate e queijo gratinado, acompanhado de arroz e batata frita.\n Tamanhos: P, M, G.',
+        Imagem: 'https://www.receiteria.com.br/wp-content/uploads/file-de-frango-parmegiana-730x548.jpeg',
     },{
-        Nome:'Escondidinho de Charque',
-        Preco: `R$${21}`,
-        Refeicao: "Escondidinho de Macaxeira com Charque, temperada com ervas.",
-        Imagem: 'https://receitinhas.com.br/wp-content/uploads/2023/07/127235746_422063668823565_2982702623690103001_n-730x365.jpg',
+        Nome:'Carne do Sol com Fritas',
+        Preco: `R$ 30`,
+        Refeicao: "Carne do Sol acompanhado com Batata ou Polenta Frita. Serve até 2 pessoas",
+        Imagem: 'https://img77.uenicdn.com/image/upload/v1572878330/business/d-boinha-bar-e-petiscos/196ac91e-d4c5-42d7-8ee3-9657182e3452.jpg',
     },{
-        Nome:'Cuzcuz com Manteiga (Veggie)',
-        Preco: `R$${14}`,
-        Refeicao: "Cuzcuz amanteigado com manteiga de palma.",
-        Imagem: 'https://receitastanahora.com.br/wp-content/uploads/2021/07/cuscuz.jpg',
+        Nome:'Carbonara',
+        Preco: `R$ 34`,
+        Refeicao: "Macarrão feito ao molho branco, bacon e queijo parmesão. Serve 1 pessoa",
+        Imagem: 'https://www.clubedereceitas.com.br/wp-content/uploads/2023/06/receita-macarrao-a-carbonara.jpg',
     },{
-        Nome:'Cuzcuz Recheado',
-        Preco: `R$${18}`,
-        Refeicao: "Cuzcuz amanteigado recheado com charque, ovos ou frango, a sua escolha.",
-        Imagem: 'https://i.ytimg.com/vi/rVy7e4GH08g/maxresdefault.jpg',
+        Nome:'Ratatouille',
+        Preco: `R$ 32 / 40`,
+        Refeicao: "Ratatouille feito com berinjela, abobrinha, pimentão, tomate e cebola. Serve 1 ou 2 pessoas",
+        Imagem: 'https://static.itdg.com.br/images/1200-675/189dacab4a4e8151b2451ecf97f85cc2/346231-original.jpg',
     },{
-        Nome:'Tapioca Recheada',
-        Preco: `R$${16}`,
-        Refeicao: "Tapioca amanteigada recheada com charque, frango, ovos ou peito de peru, a sua escolha.",
-        Imagem: 'https://static.baratocoletivo.com.br/2020/0717/oferta_15950166727609_destaque.jpg',
+        Nome:'Feijoada',
+        Preco: `R$ 31 / 43 / 57`, 
+        Refeicao: "Feijoada completa com arroz, couve, farofa, laranja e torresmo. Tamanhos: P, M, G.",
+        Imagem: 'https://assets.unileversolutions.com/recipes-v2/229468.jpg',
         
     },{    
-        Nome:'Café da Manhã Americano',
-        Preco: `R$${25}`,
-        Refeicao: "Panquecas com manteiga acompanhadas por ovos e bacon em tiras.",
-        Imagem: 'https://cdn.deliway.com.br/blog/base/442/b07/715/cafe-da-manha-americano.jpg',
+        Nome:'Strogonoff de Frango',
+        Preco: `R$ 28`,
+        Refeicao: "Strogonoff de frango com arroz e batata palha. Serve 1 pessoa",
+        Imagem: 'https://static.itdg.com.br/images/360-240/7c81c9a508c89731ad019f7306c97e48/332854-original-1-.jpg',
     }
 
 ]
@@ -47,7 +47,7 @@ export default function Almoco(){
             <>
 
             <div className='almoco-title'>
-                <span id='title'>Cardápio para o Almoço</span>
+                <span id='almoco-title'>Cardápio para o Almoço</span>
             </div>
 
             <div className='box-comida' key={1}>
@@ -57,7 +57,6 @@ export default function Almoco(){
                      <img className='comida-imagem' src={comida.Imagem}></img>
                      <span className='comida-nome'>{comida.Nome}</span>
                      <span className='comida-preco'>{comida.Preco}</span>
-                     <span className='comida-descricao'>{comida.Descricao}</span>
                      <span className='comida-refeicao'>{comida.Refeicao}</span>
                  </div>
                      

@@ -1,40 +1,40 @@
 import { useEffect} from 'react'
-import './index.css'
+import './indexSobremesas.css'
 
 export default function Sobremesas(){
 
     const comidas =[ {
 
-        Nome:'Misto Quente',
-        Preco: `R$${8}`,
-        Descricao: 'Pão com manteiga, recheado com queijo e peito de peru.',
-        Imagem: 'https://t2.uc.ltmcdn.com/pt/posts/4/6/0/como_fazer_um_misto_quente_24064_orig.jpg',
+        Nome:'Pudim',
+        Preco: `R$ ${11}`,
+        Refeicao: 'O tradicional, simples e delicioso pudim de leite condensado com calda de caramelo.',
+        Imagem: 'https://www.aperitifalafrancaise.com.br/wp-content/uploads/2023/06/Receita-de-Pudim-de-Leite-Condensado.webp',
     },{
-        Nome:'Escondidinho de Charque',
-        Preco: `R$${21}`,
-        Refeicao: "Escondidinho de Macaxeira com Charque, temperada com ervas.",
-        Imagem: 'https://receitinhas.com.br/wp-content/uploads/2023/07/127235746_422063668823565_2982702623690103001_n-730x365.jpg',
+        Nome:'Mousse De Maracuja',
+        Preco: `R$ ${14}`,
+        Refeicao: "Mousse de maracuja coberto com um delicioso creme de chocolate, com raspas de chocolate por cima.",
+        Imagem: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNq8lvXdMOlyBH_ndf43St52PNCOiYkS1NYB1jVWjMfHAYijIwqRpEslXeo_68hSArNQZL4Gf5X3pes6I74-oRPyJ9o4buITRgoJOJ-EG6i3yYhuwCG2LR3-RGjIK8uTRJiW-ZcOQ8c9o8PfKGUGa8NC6fZP0p36_ZVuBw_ql8HVwXGDYkRaAYJKn9Hg/s4480/mousse-de-maracuja-com-chocolate-1.webp',
     },{
-        Nome:'Cuzcuz com Manteiga (Veggie)',
-        Preco: `R$${14}`,
-        Refeicao: "Cuzcuz amanteigado com manteiga de palma.",
-        Imagem: 'https://receitastanahora.com.br/wp-content/uploads/2021/07/cuscuz.jpg',
+        Nome:'Banoffee',
+        Preco: `R$ ${18}`,
+        Refeicao: "Torta de banana com doce de leite e chantilly, coberta por raspas de chocolate",
+        Imagem: 'https://marcasmais.com.br/wp-content/uploads/2023/04/Torta-Banoffee-1-1024x742.jpg',
     },{
-        Nome:'Cuzcuz Recheado',
-        Preco: `R$${18}`,
-        Refeicao: "Cuzcuz amanteigado recheado com charque, ovos ou frango, a sua escolha.",
-        Imagem: 'https://i.ytimg.com/vi/rVy7e4GH08g/maxresdefault.jpg',
+        Nome:'Fatia de Torta de Limão',
+        Preco: `R$ ${16}`,
+        Refeicao: "Torta de limão com massa crocante e recheio cremoso, coberta por merengue e raspas de limão.",
+        Imagem: 'https://guiadacozinha.com.br/wp-content/uploads/2019/10/torta-de-limao-com-merengue-33070.jpg',
     },{
-        Nome:'Tapioca Recheada',
-        Preco: `R$${16}`,
-        Refeicao: "Tapioca amanteigada recheada com charque, frango, ovos ou peito de peru, a sua escolha.",
-        Imagem: 'https://static.baratocoletivo.com.br/2020/0717/oferta_15950166727609_destaque.jpg',
+        Nome:'Petit Gateau',
+        Preco: `R$ ${21}`,
+        Refeicao: "Bolinho quente de chocolate com recheio cremoso, acompanhado por sorvete de creme.",
+        Imagem: 'https://img.cybercook.com.br/receitas/434/petit-gateau.jpeg',
         
     },{    
-        Nome:'Café da Manhã Americano',
-        Preco: `R$${25}`,
-        Refeicao: "Panquecas com manteiga acompanhadas por ovos e bacon em tiras.",
-        Imagem: 'https://cdn.deliway.com.br/blog/base/442/b07/715/cafe-da-manha-americano.jpg',
+        Nome:'Grand Gateau',
+        Preco: `R$ ${34}`,
+        Refeicao: "Picole afundado em um bolinho quente de chocolate com recheio cremoso, acompanhado por sorvete de creme e calda de chocolate. ",
+        Imagem: 'https://uploads.metropoles.com/wp-content/uploads/2019/10/25171251/Grand-Gateau-Nikkei-Davi-Fernandes-1.jpg',
     }
 
 ]
@@ -47,7 +47,7 @@ export default function Sobremesas(){
             <>
 
             <div className='sobremesas-title'>
-                <span id='title'>Cardápio de Sobremeas</span>
+                <span id='doces-title'>Sobremesas</span>
             </div>
 
             <div className='box-comida' key={1}>
@@ -57,7 +57,6 @@ export default function Sobremesas(){
                      <img className='comida-imagem' src={comida.Imagem}></img>
                      <span className='comida-nome'>{comida.Nome}</span>
                      <span className='comida-preco'>{comida.Preco}</span>
-                     <span className='comida-descricao'>{comida.Descricao}</span>
                      <span className='comida-refeicao'>{comida.Refeicao}</span>
                  </div>
                      

@@ -1,40 +1,40 @@
 import { useEffect} from 'react'
-import './index.css'
+import './indexJantar.css'
 
 export default function Jantar(){
 
     const comidas =[ {
 
-        Nome:'Misto Quente',
-        Preco: `R$${8}`,
-        Descricao: 'Pão com manteiga, recheado com queijo e peito de peru.',
-        Imagem: 'https://t2.uc.ltmcdn.com/pt/posts/4/6/0/como_fazer_um_misto_quente_24064_orig.jpg',
+        Nome:'Hamburguer Artesanal com Fritas (Acompanha Refri e Molhos)',
+        Preco: `R$ ${36}`,
+        Refeicao: 'Pão com carne artesanal, bacon em tiras, queijo cheddar, alface, tomate e cebola caramelizada. Acompanha fritas, refrigerante e molhos.',
+        Imagem: 'https://static.itdg.com.br/images/1200-630/25eccc57e89354df6b2df7d9060aca4e/355695-original.jpg',
     },{
-        Nome:'Escondidinho de Charque',
-        Preco: `R$${21}`,
-        Refeicao: "Escondidinho de Macaxeira com Charque, temperada com ervas.",
-        Imagem: 'https://receitinhas.com.br/wp-content/uploads/2023/07/127235746_422063668823565_2982702623690103001_n-730x365.jpg',
+        Nome:'Fatia única de pizza (Sabor a escolher)',
+        Preco: `R$ ${32}`,
+        Refeicao: "Fatia de pizza de 15cm. Sabores: Marguerita, 4 Queijos, Frango com Catupiry, Calabresa, Portuguesa, Pepperoni.",
+        Imagem: 'https://www.designi.com.br/images/preview/10755260.jpg',
     },{
-        Nome:'Cuzcuz com Manteiga (Veggie)',
-        Preco: `R$${14}`,
-        Refeicao: "Cuzcuz amanteigado com manteiga de palma.",
-        Imagem: 'https://receitastanahora.com.br/wp-content/uploads/2021/07/cuscuz.jpg',
+        Nome:'Almôndegas ao Sugo',
+        Preco: `R$ ${30}`,
+        Refeicao: "Almôndegas de carne moída ao molho de tomate, acompanhadas por arroz branco e batata palha.",
+        Imagem: 'https://conteudo.imguol.com.br/c/entretenimento/ca/2022/10/14/almondegas-ao-sugo-1665771899729_v2_4x3.jpg',
     },{
-        Nome:'Cuzcuz Recheado',
-        Preco: `R$${18}`,
-        Refeicao: "Cuzcuz amanteigado recheado com charque, ovos ou frango, a sua escolha.",
-        Imagem: 'https://i.ytimg.com/vi/rVy7e4GH08g/maxresdefault.jpg',
+        Nome:'Macarrão com Camarões ao Molho Branco',
+        Preco: `R$ ${37}`,
+        Refeicao: "Macarrão ao molho branco com camarões, temperado com ervas finas e queijo parmesão ralado.",
+        Imagem: 'https://static.itdg.com.br/images/1200-675/bc528efbf3b8577477cc9eda0adf25d7/326681-original.jpg',
     },{
-        Nome:'Tapioca Recheada',
-        Preco: `R$${16}`,
-        Refeicao: "Tapioca amanteigada recheada com charque, frango, ovos ou peito de peru, a sua escolha.",
-        Imagem: 'https://static.baratocoletivo.com.br/2020/0717/oferta_15950166727609_destaque.jpg',
+        Nome:'Salmão Grelhado',
+        Preco: `R$ ${40}`,
+        Refeicao: "Salmão grelhado com molho de manteiga e ervas, acompanhado por arroz branco, salada e legumes assados.",
+        Imagem: 'https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3272574:1661813887/Fil%C3%A9%20de%20Salm%C3%A3o%20Grelhado%20(1).jpg?f=16x9&$p$f=767b29d',
         
     },{    
-        Nome:'Café da Manhã Americano',
-        Preco: `R$${25}`,
-        Refeicao: "Panquecas com manteiga acompanhadas por ovos e bacon em tiras.",
-        Imagem: 'https://cdn.deliway.com.br/blog/base/442/b07/715/cafe-da-manha-americano.jpg',
+        Nome:'Risoto de Cogumelos',
+        Preco: `R$ ${38}`,
+        Refeicao: "Risoto de cogumelos frescos, temperado com ervas finas e queijo parmesão ralado.",
+        Imagem: 'https://blog.biglar.com.br/wp-content/uploads/2023/06/iStock-1367349793.jpg',
     }
 
 ]
@@ -57,7 +57,6 @@ export default function Jantar(){
                      <img className='comida-imagem' src={comida.Imagem}></img>
                      <span className='comida-nome'>{comida.Nome}</span>
                      <span className='comida-preco'>{comida.Preco}</span>
-                     <span className='comida-descricao'>{comida.Descricao}</span>
                      <span className='comida-refeicao'>{comida.Refeicao}</span>
                  </div>
                      

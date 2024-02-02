@@ -1,40 +1,40 @@
 import { useEffect } from 'react'
-import './index.css'
+import './indexBebidas.css'
 
 export default function Bebidas(){
 
     const comidas =[ {
 
-        Nome:'Misto Quente',
-        Preco: `R$${8}`,
-        Descricao: 'Pão com manteiga, recheado com queijo e peito de peru.',
-        Imagem: 'https://t2.uc.ltmcdn.com/pt/posts/4/6/0/como_fazer_um_misto_quente_24064_orig.jpg',
+        Nome:'Drinks (Verificar Disponibilidade)',
+        Preco: `R$ ${21}`,
+        Refeicao: 'Drinks variados, com ou sem álcool, a sua escolha. Por exemplo: Sex on the Beach, Lagoa Azul, Coqueteis, etc.',
+        Imagem: 'https://claudia.abril.com.br/wp-content/uploads/2022/11/garota-drink-1154.jpg?quality=85&strip=info',
     },{
-        Nome:'Escondidinho de Charque',
-        Preco: `R$${21}`,
-        Refeicao: "Escondidinho de Macaxeira com Charque, temperada com ervas.",
-        Imagem: 'https://receitinhas.com.br/wp-content/uploads/2023/07/127235746_422063668823565_2982702623690103001_n-730x365.jpg',
+        Nome:'Refrigerantes (Verificar Disponibilidade)',
+        Preco: `R$ ${13}`,
+        Refeicao: "Copo de 750ml com refrigerantes diversos a sua escolha, como Coca-Cola, Guaraná, Sprite, Fanta, etc.",
+        Imagem: 'https://s2.glbimg.com/GUda5oj9xkd_yQNyn36mDn9XJmo=/620x455/e.glbimg.com/og/ed/f/original/2018/08/17/beber-refrigerante-todos-os-dias-esta-te-matando.jpg',
     },{
-        Nome:'Cuzcuz com Manteiga (Veggie)',
-        Preco: `R$${14}`,
-        Refeicao: "Cuzcuz amanteigado com manteiga de palma.",
-        Imagem: 'https://receitastanahora.com.br/wp-content/uploads/2021/07/cuscuz.jpg',
+        Nome:'Café com ou sem Leite',
+        Preco: `R$ ${7}`,
+        Refeicao: "Café puro ou com leite, a sua escolha.",
+        Imagem: 'https://static.itdg.com.br/images/1200-630/00fc39645a2f0552e50f874b79a8523e/cafe.jpg',
     },{
-        Nome:'Cuzcuz Recheado',
-        Preco: `R$${18}`,
-        Refeicao: "Cuzcuz amanteigado recheado com charque, ovos ou frango, a sua escolha.",
-        Imagem: 'https://i.ytimg.com/vi/rVy7e4GH08g/maxresdefault.jpg',
+        Nome:'Água sem / com gás',
+        Preco: `R$ ${5}`,
+        Refeicao: "Água mineral com ou sem gás, a sua escolha.",
+        Imagem: 'https://integrative.med.br/wp-content/uploads/2023/01/Ja-bebeu-agua-hoje-Entao-entenda-a-importancia-da-agua-para-o-corpo.jpg',
     },{
-        Nome:'Tapioca Recheada',
-        Preco: `R$${16}`,
-        Refeicao: "Tapioca amanteigada recheada com charque, frango, ovos ou peito de peru, a sua escolha.",
-        Imagem: 'https://static.baratocoletivo.com.br/2020/0717/oferta_15950166727609_destaque.jpg',
+        Nome:'Sucos (Verificar Disponibilidade)',
+        Preco: `R$ ${13}`,
+        Refeicao: "Copo de 750ml com suco natural de frutas a sua escolha, como laranja, limão, abacaxi, maracujá, etc.",
+        Imagem: 'https://www.emporiobahamas.com.br/wp-content/uploads/2023/08/AdobeStock_223473605-scaled.jpeg',
         
     },{    
-        Nome:'Café da Manhã Americano',
-        Preco: `R$${25}`,
-        Refeicao: "Panquecas com manteiga acompanhadas por ovos e bacon em tiras.",
-        Imagem: 'https://cdn.deliway.com.br/blog/base/442/b07/715/cafe-da-manha-americano.jpg',
+        Nome:'Água de Coco',
+        Preco: `R$ ${15}`,
+        Refeicao: "Copo de 750ml com água de coco natural, direto do coco verde.",
+        Imagem: 'https://alavoura.com.br/wp-content/uploads/2022/04/coco-verde.jpg',
     }
 
 ]
@@ -47,7 +47,7 @@ export default function Bebidas(){
             <>
 
             <div className='bebidas-title'>
-                <span id='title'>Cardápio de Bebidas</span>
+                <span id='title-bebida'>Bebidas</span>
             </div>
 
             <div className='box-comida' key={1}>
@@ -57,7 +57,6 @@ export default function Bebidas(){
                      <img className='comida-imagem' src={comida.Imagem}></img>
                      <span className='comida-nome'>{comida.Nome}</span>
                      <span className='comida-preco'>{comida.Preco}</span>
-                     <span className='comida-descricao'>{comida.Descricao}</span>
                      <span className='comida-refeicao'>{comida.Refeicao}</span>
                  </div>
                      
