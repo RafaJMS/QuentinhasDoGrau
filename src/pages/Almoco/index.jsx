@@ -34,7 +34,7 @@ export default function Almoco(){
         Nome:'Strogonoff de Frango',
         Preco: `R$ 28`,
         Refeicao: "Strogonoff de frango com arroz e batata palha. Serve 1 pessoa",
-        Imagem: 'https://static.itdg.com.br/images/360-240/7c81c9a508c89731ad019f7306c97e48/332854-original-1-.jpg',
+        Imagem: 'https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg',
     }
 
 ]

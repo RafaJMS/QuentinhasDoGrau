@@ -8,7 +8,6 @@ import * as bootstrap from 'bootstrap'
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <BrowserRouter>
-    
     <App />
   </BrowserRouter>,
 )
