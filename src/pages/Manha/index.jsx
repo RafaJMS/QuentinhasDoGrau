@@ -38,10 +38,6 @@ export default function Cafe(){
     }
 
 ]
-
-    useEffect(()=>{
-        
-    },[])
     
         return(
             <>

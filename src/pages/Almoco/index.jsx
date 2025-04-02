@@ -18,7 +18,7 @@ export default function Almoco(){
         Nome:'Carbonara',
         Preco: `R$ 34`,
         Refeicao: "Macarrão feito ao molho branco, bacon e queijo parmesão. Serve 1 pessoa",
-        Imagem: 'https://www.clubedereceitas.com.br/wp-content/uploads/2023/06/receita-macarrao-a-carbonara.jpg',
+        Imagem: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-threeByTwoMediumAt2X-v2.jpg',
     },{
         Nome:'Ratatouille',
         Preco: `R$ 32 / 40`,
@@ -33,7 +33,7 @@ export default function Almoco(){
     },{    
         Nome:'Strogonoff de Frango',
         Preco: `R$ 28`,
-        Refeicao: "Strogonoff de frango com arroz e batata palha. Serve 1 pessoa",
+        Refeicao: "Strogonoff de frango com arroz e batata palha. Serve 2 pessoas",
         Imagem: 'https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg',
     }
 
@@ -52,13 +52,13 @@ export default function Almoco(){
 
             <div className='box-comida' key={1}>
                 {comidas.map((comida)=> (
-                    <>
+                <>
                     <div className='comida' key={1}>
                      <img className='comida-imagem' src={comida.Imagem}></img>
                      <span className='comida-nome'>{comida.Nome}</span>
                      <span className='comida-preco'>{comida.Preco}</span>
                      <span className='comida-refeicao'>{comida.Refeicao}</span>
-                 </div>
+            </div>
                      
                  </>
 

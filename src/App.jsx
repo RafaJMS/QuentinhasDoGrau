@@ -7,7 +7,7 @@ import Almoco from './pages/Almoco'
 import Jantar from './pages/Jantar'
 import Sobremesas from './pages/Sobremesas'
 import Bebidas from './pages/Bebidas'
-import * as bootstrap from 'bootstrap'
+import Footer from './components/Footer'
 
 
 
@@ -27,9 +27,10 @@ function App() {
         <Route path={'/sobremesas'} element={<Sobremesas/>}/>
         <Route path={'/bebidas'} element={<Bebidas/>}/>
       </Routes>
+
+     <Footer></Footer>
+     
       </div>
-      
-    
     </>
   )
 }

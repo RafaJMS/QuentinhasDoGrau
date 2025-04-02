@@ -6,25 +6,58 @@
     padding: 50px;
     gap: 2rem;
 }
-
+.major-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.intro-collection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 4%;
+}
+.intro-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+#history.intro-box {
+    flex-direction: row-reverse;
+}
+.intro-box div{
+    width: 75%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.intro-img{
+    width: 75%;
+}
+#location.intro-img{
+    box-shadow: none;
+}
+.intro-box article{
+    width: 80%;
+    font-size: 17px;
+}
 .title{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
 }
 .text{
     width: 50%;
-    font-size: 30px;
-    text-align: center;
-}
-.cardapio{
-    background-color: black;
-    padding: 10px;
-    color: aliceblue;
     font-size: 27px;
-    border-radius: 1rem;
-    width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.671);
+    text-align: center;
 }
 .section-box{
     display: flex;
@@ -39,7 +72,6 @@
     transition: all 0.3s;
     padding: 15px;
     font-size: 23px;
-    
 }
 
 #section-link:hover{
@@ -50,42 +82,19 @@
     border: 1px solid;
     border-radius: 1rem;
 }
-
-.localizacao{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 1rem;
-}
-.textf{
-    width: 50%;
-    font-size: 27px;
-    text-align: center;
-    color: black;
-}
 .endereco{
     font-size: 21px;
     color: black;
     padding: 10px;
-    width: 40%;
+    width: 100%;
     border-radius: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.671);
+    background-color: white;
 }
 
 .contato{
     font-size: 21px;
     color: black;
     padding: 10px;
-    width: 40%;
-    transition: all 0.3s;
-}
-
-.contato:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-    border-radius: 1rem;
-    background-color: darkgreen;
-    color: whitesmoke;
+    width: 100%;
 }

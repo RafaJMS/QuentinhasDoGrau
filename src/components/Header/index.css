@@ -3,22 +3,23 @@
     background-color: white;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    top: 0;
     height: 80px;
     gap: 5rem;
     align-items: center;
     border-bottom: 1px solid black;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.486);
     box-sizing: content-box;
-
+    position: fixed;
 }
 
 .titleheader-box{
-    padding-left: 3rem;
+    padding-left: 2rem;
     gap: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
 
 .headertype-box{
@@ -26,7 +27,7 @@
     gap: 5rem;
     justify-content: center;
     width: 65%;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     text-overflow: clip;
     overflow: hidden;
