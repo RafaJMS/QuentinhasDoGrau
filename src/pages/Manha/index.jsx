@@ -39,33 +39,35 @@ export default function Cafe(){
 
 ]
     
-        return(
-            <>
+useEffect(()=>{
+        
+},[])
 
-            <div className='cafe-title'>
-                <span id='cafe-title'>Cardápio para o Café da Manhã</span>
-            </div>
+return(
+    <>
+    <div className='comidas-container'>
+        <div className='comidas-title'>
+            <span id='comidas-title'>Café Da Manhã</span>
+        </div>
 
-            <div className='box-comida' key={1}>
-                {comidas.map((comida)=> (
-                    <>
+        <div className='box-comida' key={1}>
+            {comidas.map((comida)=> (
+                <>
                     <div className='comida' key={1}>
-                     <img className='comida-imagem' src={comida.Imagem}></img>
-                     <span className='comida-nome'>{comida.Nome}</span>
-                     <span className='comida-preco'>{comida.Preco}</span>
-                     <span className='comida-refeicao'>{comida.Refeicao}</span>
-                 </div>
-                     
-                 </>
-
-                )
-            )}
-            </div>
-            </>   
-            
-            
-        )
-
-    
-
+                        <div className='comida-imagem-container'>
+                            <img className='comida-imagem' src={comida.Imagem} alt={comida.Nome} />
+                        </div>
+                        <div className='comida-descricao'>
+                            <span className='comida-nome'>{comida.Nome}</span>
+                            <span className='comida-preco'>{comida.Preco}</span>
+                            <span className='comida-refeicao'>{comida.Refeicao}</span>
+                        </div>
+                    </div>
+            </>
+            )
+        )}
+    </div>
+        </div>
+    </>   
+)
 }

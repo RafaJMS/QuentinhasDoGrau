@@ -1,4 +1,7 @@
 import "./index.css"
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useState } from 'react';
 
 export default function Home(){
     const cards =[ {
@@ -37,6 +40,6 @@ export default function Home(){
                 </div>
             </div>))}
         </div>
-        </>
+    </>
     )
 }

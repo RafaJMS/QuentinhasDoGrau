@@ -1,17 +1,17 @@
 
 .header-box{
-    background-color: white;
+    background-color: #D3F9B5;
     display: flex;
     flex-direction: row;
     width: 100%;
     top: 0;
-    height: 80px;
     gap: 5rem;
     align-items: center;
     border-bottom: 1px solid black;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.486);
-    box-sizing: content-box;
-    position: fixed;
+    box-sizing: border-box;
+    position: sticky;
+    z-index: 1000;
 }
 
 .titleheader-box{
@@ -46,18 +46,18 @@
 #icon-link{
     transition: all 0.3s;
     text-decoration: none;
-    color: black;
+    color: #144214;
     text-overflow: clip;
 }
 
 #icon-link:hover{
+    color: #3D0C11;
     cursor: pointer;
     transform: scale(1.1);
-    
 }
 
 #type-link{
-    color: black;
+    color: #144214;
     transition: all 0.3s;
     text-decoration: none;
     padding: 12px;
@@ -66,9 +66,28 @@
 }
 
 #type-link:hover{
-    background-color: darkgreen;
-    border-radius: 1rem;
-    color: whitesmoke;
+    color: #3D0C11;
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.08);
+}
+
+.profile-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.personal-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 1rem;
 }
