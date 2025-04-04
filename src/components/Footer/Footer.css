@@ -6,3 +6,14 @@ footer{
     align-items: center;
     flex-direction: column;
 }
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+}
+.footer-content p{
+    margin: 0;
+}
