@@ -69,21 +69,25 @@ export default function Carrinho() {
           ))}
         </ul>
       )}
-      <div className="buttons" style={{ marginTop:`1rem`, display: 'flex', justifyContent: 'space-between' }}>
+      
       {itensCarrinho.length > 0 && (
+        <div className="buttons" 
+        style={{ marginTop:`1rem`, 
+        display: 'flex', 
+        justifyContent: 'space-between' }}>
         <Button
           variant="outline-secondary"
           onClick={limparCarrinho}
         >
           Limpar Carrinho
         </Button>
-      )}
-       <Button
-          variant="primary"
-        >
-          Confirmar Pagamento
-        </Button>
+        <Button
+        variant="primary"
+      >
+        Confirmar Pagamento
+      </Button>
       </div>
+      )}
     </>
   );
 }

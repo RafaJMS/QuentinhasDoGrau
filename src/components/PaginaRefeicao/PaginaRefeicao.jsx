@@ -1,9 +1,15 @@
 // src/components/PaginaRefeicao.jsx
 import './index.css'
 import { useCarrinho } from '../../context/CarrinhoContext'
+import { useUI } from '../../context/UIContext';
 
 export default function PaginaRefeicao({ titulo, comidas }) {
   const { adicionarAoCarrinho } = useCarrinho();
+  const { abrirCarrinho } = useUI();
+  const handleCliqueComida = (comida) => {
+    adicionarAoCarrinho(comida);
+    abrirCarrinho(); // isso faz abrir o carrinho
+  };
 
   return (
     <div className='comidas-container'>
@@ -13,7 +19,7 @@ export default function PaginaRefeicao({ titulo, comidas }) {
 
       <div className='box-comida'>
         {comidas.map((comida, index) => (
-          <div className='comida' key={index}  onClick={() => adicionarAoCarrinho(comida)}>
+          <div className='comida' key={index}  onClick={() => handleCliqueComida(comida)}>
             <div className='comida-imagem-container'>
               <img className='comida-imagem' src={comida.Imagem} alt={comida.Nome} />
             </div>
