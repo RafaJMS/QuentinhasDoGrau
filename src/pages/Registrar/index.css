@@ -1,0 +1,10 @@
+.input-form-group{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  padding-inline: 3.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

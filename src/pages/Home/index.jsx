@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom"
 import { useState } from 'react';
+import { useAcessibilidade } from "../../context/AcessibilidadeContext";
 
 export default function Home(){
     const cardapios = [{
@@ -31,6 +32,7 @@ export default function Home(){
         Image: '/src/assets/refri.jpg',
         id: "bebidas",
     }]
+    const { tamanhoFonte, contrasteAlto } = useAcessibilidade();
 
     return(
         <>
@@ -76,24 +78,40 @@ export default function Home(){
                             📞 (79) 99999-1234<br/>
                         </p>
                     </div>
-                    <img className="welcome-img" src={'/src/assets/map.svg'}></img>
+                    <img className="welcome-img" src={ contrasteAlto ? '/src/assets/mapYellow.png' : '/src/assets/map.svg'}></img>
                 </div>
             </div>
-            <div className="cardapio-collection" id={"cardapio"}>
-                <span className="title">Conheça nossos cardapios: </span>
+            <div className="cardapio-collection" id="cardapio">
+                <span className="title">Conheça nossos cardápios: </span>
                 <div className="cardapio-box-container">
-                    {cardapios.map((cardapio)=> (
-                        <Card style={{ width: '20rem', height:'26rem', borderRadius:'10px',border:'1px solid', boxShadow: '0 0 5px rgba(0, 0, 0, 0.471)'}} key={cardapio.id}>
-                        <Card.Img variant="top" className="cardapio-img" src={cardapio.Image} />
-                            <Card.Body>
-                                <Card.Title>{cardapio.Title}</Card.Title>
-                                <Card.Text>{cardapio.Description}
-                                </Card.Text>
-                                <Link to={cardapio.id} id="cardapio-link"><Button variant="primary" id="intro-button">Visitar</Button></Link>
-                            </Card.Body>
-                      </Card>))}
+                    {cardapios.map((cardapio) => (
+                    <Card
+                        key={cardapio.id}
+                        style={{
+                        flex: '1 1 280px', // <== Responsivo!
+                        maxWidth: '320px',
+                        minWidth: '250px',
+                        height: '26rem',
+                        borderRadius: '10px',
+                        border: '1px solid',
+                        boxShadow: '0 0 5px rgba(0, 0, 0, 0.471)'
+                        }}
+                    >
+                        <Card.Img variant="top" className="cardapio-img" style={{minWidth: '150px'}} src={cardapio.Image} />
+                        <Card.Body>
+                        <Card.Title>{cardapio.Title}</Card.Title>
+                        <Card.Text>{cardapio.Description}</Card.Text>
+                        <Link to={`/${cardapio.id}`} id="cardapio-link">
+                            <Button variant="primary" id="intro-button">
+                            Visitar
+                            </Button>
+                        </Link>
+                        </Card.Body>
+                    </Card>
+                    ))}
                 </div>
             </div>
+
         </div>
     </>
     )

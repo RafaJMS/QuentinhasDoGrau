@@ -2,14 +2,23 @@
 import './index.css'
 import { useCarrinho } from '../../context/CarrinhoContext'
 import { useUI } from '../../context/UIContext';
+import { useEffect } from 'react';
 
 export default function PaginaRefeicao({ titulo, comidas }) {
   const { adicionarAoCarrinho } = useCarrinho();
   const { abrirCarrinho } = useUI();
+  
   const handleCliqueComida = (comida) => {
     adicionarAoCarrinho(comida);
-    abrirCarrinho(); // isso faz abrir o carrinho
+    abrirCarrinho();
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // ou 'instant' se preferir direto
+    }, 100); // pequeno atraso pra garantir renderização
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div className='comidas-container'>

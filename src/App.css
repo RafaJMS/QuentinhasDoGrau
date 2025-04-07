@@ -1,7 +1,8 @@
 .major-box{
     width: 100%;
-    height: 100%;
     text-align: center;
+    overflow-anchor: none;
+    font-size: inherit;
 }
 #root{
     background-color: #DADDD8;

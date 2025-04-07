@@ -1,47 +1,60 @@
 import "../Header/index.css";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useUI } from "../../context/UIContext";
 import { useCarrinho } from "../../context/CarrinhoContext";
 import Carrinho from "../Carrinho/Carrinho";
+import React from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function Header() {
   const { mostrarCarrinho, fecharCarrinho, abrirCarrinho } = useUI(); // <- usa os 3
   const { itensCarrinho } = useCarrinho();
 
   return (
-    <div className="header-box">
-      <Link id="icon-link" to={'/'}>
-        <div className="titleheader-box">
-          <img className="title-img" src="./src/assets/restaurant-menu-svgrepo-com.svg" />
+    <>
+    <Navbar expand="lg" className="shadow-sm px-3 header-box" sticky="top" style={{ backgroundColor: '#274029'}}>
+      <Container>
+        <Navbar.Brand as={Link} to="/" id="icon-link" className="fw-bold d-flex align-items-center titleheader-box">
+            <img src="./src/assets/restaurant-menu-svgrepo-com.svg"
+            alt="Logo"
+            width="40"
+            height="40"
+            className="me-2 title-img"
+          />
           <span className="title-header">Quentinhas do Grau</span>
-        </div>
-      </Link>
+        </Navbar.Brand>
 
-      <div className="headertype-box">
-        <Link id="type-link" to={"/cafe"}><span className="type-header">Café da Manhã</span></Link>
-        <Link id="type-link" to={"/almoco"}><span className="type-header">Almoço</span></Link>
-        <Link id="type-link" to={"/jantar"}><span className="type-header">Jantar</span></Link>
-        <Link id="type-link" to={"/sobremesas"}><span className="type-header">Sobremesas</span></Link>
-        <Link id="type-link" to={"/bebidas"}><span className="type-header">Bebidas</span></Link>
-      </div>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-      <div className="personal-box">
-        <div id="type-link" onClick={abrirCarrinho}> {/* <- usa a função do contexto */}
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="m-auto">
+            <Nav.Link id="type-link" as={Link} to="/cafe">Café</Nav.Link>
+            <Nav.Link id="type-link" as={Link} to="/almoco">Almoço</Nav.Link>
+            <Nav.Link id="type-link" as={Link} to="/jantar">Jantar</Nav.Link>
+            <Nav.Link id="type-link" as={Link} to="/sobremesas">Sobremesas</Nav.Link>
+            <Nav.Link id="type-link" as={Link} to="/bebidas">Bebidas</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        <div className="personal-box">
+            <Navbar.Brand as={Link} id="type-link" to="/login" className="fw-bold d-flex align-items-center">
+            <div className="profile-box">
+              <img className="profile-pic" src="./src/assets/profile-circle-svgrepo-com.svg"/>
+              <span className="profile-header">Login</span>
+            </div>
+            </Navbar.Brand>
+        <Navbar.Brand as={Link} id="type-link" onClick={abrirCarrinho} className="fw-bold d-flex align-items-center ">
           <div className="profile-box">
-            <img className="profile-pic" src="./src/assets/cart2.svg" />
-            <span className="profile-header">Carrinho</span>
+              <img className="profile-pic" src="./src/assets/cart2.svg"/>
+              <span className="profile-header">Carrinho</span>
           </div>
+            </Navbar.Brand>
         </div>
         
-        <Link id="type-link" to={"/login"}>
-          <div className="profile-box">
-            <img className="profile-pic" src="./src/assets/profile-circle-svgrepo-com.svg" />
-            <span className="profile-header">Login</span>
-          </div>
-        </Link>
-      </div>
+      </Container>
+    </Navbar>
+
+      
 
       <Offcanvas
         show={mostrarCarrinho}
@@ -58,6 +71,6 @@ export default function Header() {
           <Carrinho />
         </Offcanvas.Body>
       </Offcanvas>
-    </div>
+      </>
   );
 }

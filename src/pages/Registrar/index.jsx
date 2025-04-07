@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import './login.css';
+import './index.css';
 
-const Login = () => {
+const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -18,7 +18,8 @@ const Login = () => {
         <InputGroup size="sm" className="login-box">
             <div className="content-container">
             <Form onSubmit={handleSubmit} className="login-form">
-            <h1>Login</h1>
+            <h1>Registrar</h1>
+            <div className="input-form-group">
                 <div className="form-group">
                 <span id="inputGroup-sizing-sm">Email</span>
                     <Form.Control
@@ -41,8 +42,19 @@ const Login = () => {
                         required
                     />
                 </div>
-            <p className="login-text">Não tem uma conta? <a className="login-link" href="/register">Registre-se</a></p>
-                <Button type="submit" id="intro-button">Entrar</Button>
+                <div className="form-group">
+                <span id="inputGroup-sizing-sm">Confirmar Senha</span>
+                    <Form.Control
+                        type="password"
+                        aria-label="Small"
+                        aria-describedby="inputGroup-sizing-sm"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+            </div>
+                <Button type="submit" id="intro-button">Registrar</Button>
             </Form>
             <img src="/src/assets/Computer login-bro.svg" alt="Logo" className="login-img" />
             </div>
@@ -50,4 +62,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

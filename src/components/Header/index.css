@@ -7,12 +7,13 @@
     top: 0;
     gap: 5rem;
     align-items: center;
-    height: 92px;
+    justify-content: center;
     border-bottom: 1px solid black;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.486);
     box-sizing: border-box;
     position: sticky;
     z-index: 1000;
+    margin: 0 auto;
 }
 
 .titleheader-box{
@@ -49,6 +50,7 @@
     text-decoration: none;
     color: #DADDD8;
     text-overflow: clip;
+    padding: 0;
 }
 
 #icon-link:hover{
@@ -61,7 +63,8 @@
     color: #DADDD8;
     transition: all 0.3s;
     text-decoration: none;
-    margin: 12px;
+    margin-inline: 12px;
+    margin-block: 3px;
     font-size: 17px
 }
 
@@ -100,3 +103,30 @@
     padding: 1rem;
     
 }
+
+@media (max-width: 768px) {
+    .headertype-box {
+      display: none; /* Você pode depois substituir por um menu hamburguer */
+    }
+  
+    .title-header {
+      font-size: 1rem;
+    }
+  
+    .title-img {
+      width: 30px;
+    }
+  
+    .personal-box {
+      gap: 0.5rem;
+    }
+  
+    .profile-pic {
+      width: 30px;
+      height: 30px;
+    }
+  
+    #offcanvas {
+      width: 80vw;
+    }
+  }

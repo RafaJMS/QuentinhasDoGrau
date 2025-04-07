@@ -1,26 +1,28 @@
-.comidas-container{
+.comidas-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     background-color: rgb(26, 25, 25);
-    height: 100%;
-    width: 100%;
+    min-height: calc(100vh - 140px);
+    width: 100vw;
+    max-width: 100%;
 }
-.box-comida{
+
+.box-comida {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
     justify-items: center;
     text-align: center;
     width: 100%;
-    height: 70vmax;
+    min-height: 60vh;
     color: aliceblue;
     background-color: rgb(26, 25, 25);
     gap: 1rem;
-    padding-bottom: 3rem;
+    padding: 1rem 5rem 3rem 5rem;
 }
 
-.comida{
+.comida {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,28 +32,30 @@
     border: 1px solid whitesmoke;
     border-radius: 1rem;
     transition: all 0.3s ease;
-    width: 400px;
-    max-height: 600px;
-    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
-.comida:hover{
-    transform: scale(1.08);
+.comida:hover {
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 .comida-imagem-container {
-    height: 250px;
+    height: 200px;
     width: 100%;
     overflow: hidden;
 }
 
-.comida-imagem{
+.comida-imagem {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
 }
 
-.comida-descricao{
+.comida-descricao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,14 +65,14 @@
     border-radius: 1rem;
 }
 
-
-.comida-nome{
-    font-size: 1.2rem;
+.comida-nome {
+    font-size: 1.2em;
     font-weight: 600;
+    text-align: center;
 }
 
-.comida-preco{
-    font-size: 1.15rem;
+.comida-preco {
+    font-size: 1.1em;
     font-weight: 600;
     background-color: rgb(255, 255, 255);
     color: forestgreen;
@@ -76,25 +80,64 @@
     border-radius: 1rem;
 }
 
-.comida-refeicao{
-    font-size: 18px;
+.comida-refeicao {
+    font-size: 1em;
 }
 
-.comidas-title{
+.comidas-title {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: auto;
+    padding: 1rem;
     background-color: rgb(26, 25, 25);
 }
 
-#comidas-title{
+#comidas-title {
     background-color: #DADDD8;
     color: #274029;
     padding: 10px;
-    font-size: 27px;
+    font-size: 1.5em;
     border-radius: 1rem;
-    width: 80%;
+    width: 90%;
+    max-width: 600px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.671);
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .box-comida {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .box-comida {
+      grid-template-columns: 1fr; /* 1 card por linha */
+    }
+  }
+  
+  
+/* Responsividade extra */
+@media (max-width: 480px) {
+    .comida {
+        padding: 1rem;
+    }
+
+    .comida-imagem-container {
+        height: 180px;
+    }
+
+    .comida-nome {
+        font-size: 1rem;
+    }
+
+    .comida-preco {
+        font-size: 1rem;
+    }
+
+    .comida-refeicao {
+        font-size: 0.9rem;
+    }
 }

@@ -9,18 +9,24 @@ import Sobremesas from './pages/Sobremesas/Sobremesas'
 import Bebidas from './pages/Bebidas/Bebidas'
 import Footer from './components/Footer'
 import Login from './pages/Login'
-import ScrollToTop from './components/ScrollToTop';
+import Register from './pages/Registrar'
 import { CarrinhoProvider } from './context/CarrinhoContext'
+import { useAcessibilidade } from './context/AcessibilidadeContext'
+import BotaoAcessibilidade from './components/BotaoAcessibilidade/BotaoAcessibilidade'
 
 
 function App() {
-
+  const { tamanhoFonte, contrasteAlto } = useAcessibilidade();
   return (
     <>
     <CarrinhoProvider>
-    <Header></Header>
-    <ScrollToTop />
-    <div className='major-box'>
+    <Header/>
+    <BotaoAcessibilidade />
+    <div className='major-box'style={{
+        fontSize: `${tamanhoFonte}px`,
+        backgroundColor: contrasteAlto ? "#000" : "#fff",
+        color: contrasteAlto ? "#FFD700" : "#000",
+      }}>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path={'/cafe'} element={<Cafe/>}/>
@@ -29,10 +35,9 @@ function App() {
         <Route path={'/sobremesas'} element={<Sobremesas/>}/>
         <Route path={'/bebidas'} element={<Bebidas/>}/>
         <Route path={'/login'} element={<Login/>}/>
+        <Route path={'/register'} element={<Register/>}/>
       </Routes>
-
      <Footer></Footer>
-     
       </div>
       </CarrinhoProvider>
     </>
