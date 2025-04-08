@@ -56,7 +56,7 @@ const Register = () => {
             </div>
                 <Button type="submit" id="intro-button">Registrar</Button>
             </Form>
-            <img src="/src/assets/Computer login-bro.svg" alt="Logo" className="login-img" />
+            <img src="/src/assets/Sign up-bro.svg" alt="Logo" className="login-img" />
             </div>
         </InputGroup>
     );

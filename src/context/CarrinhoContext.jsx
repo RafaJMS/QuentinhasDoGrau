@@ -12,22 +12,19 @@ export const CarrinhoProvider = ({ children }) => {
 
   const adicionarAoCarrinho = (item) => {
     setCarrinho((carrinhoAtual) => {
-      const itemExistente = carrinhoAtual.find((c) => c.Nome === item.Nome);
-        console.log(itemExistente)
-      console.log(carrinhoAtual)
+      const itemExistente = carrinhoAtual.find((itemDoCarrinho) => itemDoCarrinho.Nome === item.Nome);
+        
       if (itemExistente) {
-        // Se já tiver no carrinho e ainda não atingiu o limite
         if (itemExistente.quantidade < item.QuantidadeMaxima) {
-          return carrinhoAtual.map((c) =>
-            c.Nome === item.Nome
-              ? { ...c, quantidade: c.quantidade + 1 }
-              : c
+          return carrinhoAtual.map((itemDoCarrinho) =>
+            itemDoCarrinho.Nome === item.Nome
+              ? { ...itemDoCarrinho, quantidade: itemDoCarrinho.quantidade + 1 }
+              : itemDoCarrinho
           );
         } else {
-          return carrinhoAtual; // Já no máximo
+          return carrinhoAtual;
         }
       } else {
-        // Novo item no carrinho
         return [...carrinhoAtual, { ...item, quantidade: 1 }];
       }
     });
@@ -59,6 +56,10 @@ export const CarrinhoProvider = ({ children }) => {
     );
   };
 
+  const valorTotal = itensCarrinho.reduce((total, item) => {
+    return total + item.Preco.toFixed(2) * item.quantidade;
+  }, 0);
+
   return (
     <CarrinhoContext.Provider
       value={{
@@ -67,6 +68,7 @@ export const CarrinhoProvider = ({ children }) => {
         removerDoCarrinho,
         limparCarrinho,
         atualizarQuantidade,
+        valorTotal,
       }}
     >
       {children}

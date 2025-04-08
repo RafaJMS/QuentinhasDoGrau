@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import './login.css';
 
 const Login = () => {
@@ -41,7 +42,7 @@ const Login = () => {
                         required
                     />
                 </div>
-            <p className="login-text">Não tem uma conta? <a className="login-link" href="/register">Registre-se</a></p>
+            <p className="login-text">Não tem uma conta? <Link className="login-link" to={"/register"}>Registre-se</Link></p>
                 <Button type="submit" id="intro-button">Entrar</Button>
             </Form>
             <img src="/src/assets/Computer login-bro.svg" alt="Logo" className="login-img" />

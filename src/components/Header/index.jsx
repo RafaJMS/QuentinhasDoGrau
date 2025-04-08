@@ -25,7 +25,11 @@ export default function Header() {
           <span className="title-header">Quentinhas do Grau</span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar" as="div">
+        <button className="icon-button">
+          <img src=".\src\assets\menu.svg" alt="Menu" className="icon-img" />
+        </button>
+        </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
@@ -64,12 +68,7 @@ export default function Header() {
         backdrop={false}
         id="offcanvas"
       >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Pedido</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Carrinho />
-        </Offcanvas.Body>
+        <Carrinho/>
       </Offcanvas>
       </>
   );

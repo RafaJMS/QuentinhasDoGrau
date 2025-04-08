@@ -96,14 +96,17 @@
     padding: 0;
     gap: 1rem;
 }
-#offcanvas{
-    width: 25vw;
-    background-color: #DADDD8;
-    color: #274029;
-    padding: 1rem;
-    
-}
-
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .icon-img {
+    width: 30px;
+    height: auto;
+  }
 @media (max-width: 768px) {
     .headertype-box {
       display: none; /* Você pode depois substituir por um menu hamburguer */

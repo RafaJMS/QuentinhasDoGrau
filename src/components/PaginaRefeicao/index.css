@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: rgb(26, 25, 25);
+    background-color: rgb(2, 15, 3);
     min-height: calc(100vh - 140px);
     width: 100vw;
     max-width: 100%;
@@ -16,8 +16,7 @@
     text-align: center;
     width: 100%;
     min-height: 60vh;
-    color: aliceblue;
-    background-color: rgb(26, 25, 25);
+    color: #DADDD8;
     gap: 1rem;
     padding: 1rem 5rem 3rem 5rem;
 }
@@ -29,7 +28,7 @@
     margin: 1rem;
     padding: 2rem;
     gap: 10px;
-    border: 1px solid whitesmoke;
+    border: 1px solid #D3F9B5;
     border-radius: 1rem;
     transition: all 0.3s ease;
     width: 100%;
@@ -74,8 +73,8 @@
 .comida-preco {
     font-size: 1.1em;
     font-weight: 600;
-    background-color: rgb(255, 255, 255);
-    color: forestgreen;
+    background-color: #DADDD8;
+    color: #274029;
     padding: 8px;
     border-radius: 1rem;
 }
@@ -91,7 +90,7 @@
     align-items: center;
     height: auto;
     padding: 1rem;
-    background-color: rgb(26, 25, 25);
+    background-color: rgb(2, 15, 3);
 }
 
 #comidas-title {
@@ -102,7 +101,6 @@
     border-radius: 1rem;
     width: 90%;
     max-width: 600px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.671);
     text-align: center;
 }
 
