@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useUI } from "../../context/UIContext";
 import { useCarrinho } from "../../context/CarrinhoContext";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import Carrinho from "../Carrinho/Carrinho";
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function Header() {
-  const { mostrarCarrinho, fecharCarrinho, abrirCarrinho } = useUI(); // <- usa os 3
+  const { mostrarCarrinho, fecharCarrinho, abrirCarrinho } = useUI()
   const { itensCarrinho } = useCarrinho();
 
   return (
@@ -17,7 +20,7 @@ export default function Header() {
       <Container>
         <Navbar.Brand as={Link} to="/" id="icon-link" className="fw-bold d-flex align-items-center titleheader-box">
             <img src="/assets/restaurant-menu-svgrepo-com.svg"
-            alt="Logo"
+            alt="Logo do Quentinhas Do Grau"
             width="40"
             height="40"
             className="me-2 title-img"
@@ -27,7 +30,7 @@ export default function Header() {
 
         <Navbar.Toggle aria-controls="offcanvasNavbar" as="div">
         <button className="icon-button">
-          <img src=".\src\assets\menu.svg" alt="Menu" className="icon-img" />
+          <img src="\assets\menu.svg" alt="Menu" className="icon-img" />
         </button>
         </Navbar.Toggle>
 
@@ -43,13 +46,13 @@ export default function Header() {
         <div className="personal-box">
             <Navbar.Brand as={Link} id="type-link" to="/login" className="fw-bold d-flex align-items-center">
             <div className="profile-box">
-              <img className="profile-pic" src="/assets/profile-circle-svgrepo-com.svg"/>
+              <img className="profile-pic" alt='Icone de Login' src="/assets/profile-circle-svgrepo-com.svg"/>
               <span className="profile-header">Login</span>
             </div>
             </Navbar.Brand>
-        <Navbar.Brand as={Link} id="type-link" onClick={abrirCarrinho} className="fw-bold d-flex align-items-center ">
+        <Navbar.Brand id="type-link" onClick={abrirCarrinho} className="fw-bold d-flex align-items-center ">
           <div className="profile-box">
-              <img className="profile-pic" src="/assets/cart2.svg"/>
+              <img className="profile-pic"  alt='Icone de Carrinho' src="/assets/cart2.svg"/>
               <span className="profile-header">Carrinho</span>
           </div>
             </Navbar.Brand>

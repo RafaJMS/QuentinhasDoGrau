@@ -13,6 +13,7 @@ import Register from './pages/Registrar'
 import { CarrinhoProvider } from './context/CarrinhoContext'
 import { useAcessibilidade } from './context/AcessibilidadeContext'
 import BotaoAcessibilidade from './components/BotaoAcessibilidade/BotaoAcessibilidade'
+import Pagamento from './pages/Pagamento/Pagamento'
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path={'/bebidas'} element={<Bebidas/>}/>
         <Route path={'/login'} element={<Login/>}/>
         <Route path={'/register'} element={<Register/>}/>
+        <Route path={'/payment'} element={<Pagamento/>}/>
       </Routes>
      <Footer></Footer>
       </div>

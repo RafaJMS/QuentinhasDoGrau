@@ -41,8 +41,12 @@ export const CarrinhoProvider = ({ children }) => {
   };
 
   const atualizarQuantidade = (nome, novaQuantidade) => {
-    setCarrinho((carrinhoAtual) =>
-      carrinhoAtual.map((item) =>
+    setCarrinho((carrinhoAtual) => {
+      if (novaQuantidade <= 0) {
+        return carrinhoAtual.filter((item) => item.Nome !== nome);
+      }
+      
+      return carrinhoAtual.map((item) =>
         item.Nome === nome
           ? {
               ...item,
@@ -52,8 +56,8 @@ export const CarrinhoProvider = ({ children }) => {
                   : item.QuantidadeMaxima,
             }
           : item
-      )
-    );
+      );
+    });
   };
 
   const valorTotal = itensCarrinho.reduce((total, item) => {

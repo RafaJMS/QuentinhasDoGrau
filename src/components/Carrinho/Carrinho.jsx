@@ -2,7 +2,11 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { useCarrinho } from '../../context/CarrinhoContext';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useEffect } from 'react';
 import './index.css';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useUI } from '../../context/UIContext';
 
 export default function Carrinho() {
   const {
@@ -12,6 +16,13 @@ export default function Carrinho() {
     atualizarQuantidade,
     valorTotal,
   } = useCarrinho();
+
+  const { mostrarCarrinho, fecharCarrinho, abrirCarrinho } = useUI()
+  const location = useLocation();
+
+  useEffect(() => {
+  fecharCarrinho; // sua função para esconder o Offcanvas
+  }, [location]);
 
   return (
     <>
@@ -36,11 +47,13 @@ export default function Carrinho() {
                   <div className="cart-info">
                     <strong>{item.Nome}</strong>
                     <br />
-                    <small>R$ {item.Preco * item.quantidade}</small>
-                    <div className="quantity-controls" style={{ marginTop: '0.5rem' }}>
+                    <small>R$ {item.Preco * item.quantidade}.00</small>
+                    <div className="quantity-controls" >
+                    <div className='controls'>
+                      <div className='quantity'>
                       <Button
                         size="sm" variant="outline-secondary" onClick={() => atualizarQuantidade(item.Nome, item.quantidade - 1) }
-                        disabled={item.quantidade <= 1}
+                        disabled={item.quantidade < 1}
                         style={{ marginRight: '0.5rem' }}>
                         −
                       </Button>
@@ -50,27 +63,34 @@ export default function Carrinho() {
                         style={{ marginLeft: '0.5rem' }}>
                         +
                       </Button>
+                      </div>
                       <small style={{color:"grey"}}> Max: {item.QuantidadeMaxima}</small>
+                      </div>
+                      <Button variant="outline-danger" className='botao-hover' size="sm" onClick={() => removerDoCarrinho(item.Nome)} >
+                      <div id='trash-img'  onClick={() => removerDoCarrinho(item.Nome)} >
+                      </div>
+                      </Button>
+                  
                     </div>
                   </div>
                 </div>
                 <div id='remove-div' style={{textAlign: 'center' }}>
-                <Button variant="outline-danger" size="sm" onClick={() => removerDoCarrinho(item.Nome)} style={{ marginTop: '0.5rem' }} >
-                  Remover
-                </Button>
+                
                 </div>
               </li>
             ))}
           </ul>
         )}
         
-        
         {itensCarrinho.length > 0 && (
           <>
           <span style={{borderTop: "1px solid #DADDD8", width:"100%", padding:"0.5rem", display:"block" , fontWeight:"700"}}>Valor Total : R$ {valorTotal}.00 </span>
           <div className="buttons" style={{ marginTop:`1rem`, display: 'flex', justifyContent: 'space-between' }}>
-            <Button variant="secondary" id='' onClick={limparCarrinho}> Limpar Carrinho </Button>
-            <Button id='payment-button'>Confirmar Pagamento </Button>
+            <Button variant="secondary" id='' 
+              onClick={() => {
+              limparCarrinho();
+              }}> Limpar Carrinho </Button>
+            <Link to={"/payment"}><Button onClick={fecharCarrinho} id='payment-button'>Confirmar Pagamento </Button></Link>
         </div>
         </>
         )}

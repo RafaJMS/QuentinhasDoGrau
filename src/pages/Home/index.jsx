@@ -39,7 +39,7 @@ export default function Home(){
         <div className="intro-collection">
             <div className="content-box">
                     <div className="intro-text">
-                        <span className="title">Bem vindo!</span>
+                        <h1 className="title">Bem vindo!</h1>
                             <article className='intro-article'>
                                 Seja muito bem vindo ao Quentinhas do Grau, 
                                 o lugar perfeito para sua refeição diária. 
@@ -66,7 +66,8 @@ export default function Home(){
                             “Comida quente, preço justo e aquele tempero que abraça.”
                         </article>
                     </div>
-                    <img className="welcome-img" src={'https://cachoeiradafurna.com.br/wp-content/uploads/2020/05/comida-de-hotel-fazenda.jpg'}></img>
+                    <img className="welcome-img" alt="Imagem de pratos de comid" 
+                    src={'https://cachoeiradafurna.com.br/wp-content/uploads/2020/05/comida-de-hotel-fazenda.jpg'}></img>
                 </div>
                 <div className="welcome-img-text" id={"location"}>
                     <div className="welcome-box">
@@ -78,7 +79,7 @@ export default function Home(){
                             📞 (79) 99999-1234<br/>
                         </p>
                     </div>
-                    <img className="welcome-img" src={ contrasteAlto ? '/assets/mapYellow.png' : '/assets/map.svg'}></img>
+                    <img className="welcome-img" alt="mapa do brasil com pinos" src={ contrasteAlto ? '/assets/mapYellow.png' : '/assets/map.svg'}></img>
                 </div>
             </div>
             <div className="cardapio-collection" id="cardapio">
@@ -97,7 +98,7 @@ export default function Home(){
                         boxShadow: '0 0 5px rgba(0, 0, 0, 0.471)'
                         }}
                     >
-                        <Card.Img variant="top" className="cardapio-img" style={{minWidth: '150px'}} src={cardapio.Image} />
+                        <Card.Img variant="top" alt={`Icone que representa o /${cardapio.Title}`} className="cardapio-img" style={{minWidth: '150px'}} src={cardapio.Image} />
                         <Card.Body>
                         <Card.Title>{cardapio.Title}</Card.Title>
                         <Card.Text>{cardapio.Description}</Card.Text>

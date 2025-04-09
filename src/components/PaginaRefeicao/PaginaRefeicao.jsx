@@ -23,14 +23,14 @@ export default function PaginaRefeicao({ titulo, comidas }) {
   return (
     <div className='comidas-container'>
       <div className='comidas-title'>
-        <span id='comidas-title'>{titulo}</span>
+        <h1 id='comidas-title'>{titulo}</h1>
       </div>
 
       <div className='box-comida'>
         {comidas.map((comida, index) => (
           <div className='comida' key={index}  onClick={() => handleCliqueComida(comida)}>
             <div className='comida-imagem-container'>
-              <img className='comida-imagem' src={comida.Imagem} alt={comida.Nome} />
+              <img className='comida-imagem' src={comida.Imagem} alt={`Imagem de um /${comida.Nome}`} />
             </div>
             <div className='comida-descricao'>
               <span className='comida-nome'>{comida.Nome}</span>
