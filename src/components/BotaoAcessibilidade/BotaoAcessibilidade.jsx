@@ -13,7 +13,7 @@ export default function BotaoAcessibilidade() {
     return (
       <div className="botao-acessibilidade-container" onClick={toggleMenu}>
         <img className='botao-acessibilidade' alt="Acessibilidade"
-          src="./src/assets/accessibility-outlined-svgrepo-com.svg" />
+          src="/assets/accessibility-outlined-svgrepo-com.svg" />
         {mostrarMenu && <AcessibilidadeMenu />}
       </div>
     );

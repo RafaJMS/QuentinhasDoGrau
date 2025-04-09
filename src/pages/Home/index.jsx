@@ -9,27 +9,27 @@ export default function Home(){
     const cardapios = [{
         Title:'Manhã',
         Description: 'Venha conhecer nosso cardápio da manhã!',
-        Image: '/src/assets/cafe.jpg',
+        Image: '/assets/cafe.jpg',
         id: "cafe",
     },{
         Title:'Almoço',
         Description: 'Venha conhecer nosso cardápio de almoço!',
-        Image: '/src/assets/ratattoile.jpg',
+        Image: '/assets/ratattoile.jpg',
         id: "almoco",
     },{
         Title:'Jantar',
         Description: 'Venha conhecer nosso cardápio de jantar!',
-        Image: '/src/assets/hamburguer.jpg',
+        Image: '/assets/hamburguer.jpg',
         id: "jantar",
     },{
         Title:'Sobremesas',
         Description: 'Venha conhecer nosso cardápio de sobremesas!',
-        Image: '/src/assets/grandgateau.jpg',
+        Image: '/assets/grandgateau.jpg',
         id: "sobremesas",
     },{
         Title:'Bebidas',
         Description: 'Venha conhecer nosso cardápio de bebidas!',
-        Image: '/src/assets/refri.jpg',
+        Image: '/assets/refri.jpg',
         id: "bebidas",
     }]
     const { tamanhoFonte, contrasteAlto } = useAcessibilidade();
@@ -78,7 +78,7 @@ export default function Home(){
                             📞 (79) 99999-1234<br/>
                         </p>
                     </div>
-                    <img className="welcome-img" src={ contrasteAlto ? '/src/assets/mapYellow.png' : '/src/assets/map.svg'}></img>
+                    <img className="welcome-img" src={ contrasteAlto ? '/assets/mapYellow.png' : '/assets/map.svg'}></img>
                 </div>
             </div>
             <div className="cardapio-collection" id="cardapio">

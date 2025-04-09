@@ -45,7 +45,7 @@ const Login = () => {
             <p className="login-text">Não tem uma conta? <Link className="login-link" to={"/register"}>Registre-se</Link></p>
                 <Button type="submit" id="intro-button">Entrar</Button>
             </Form>
-            <img src="/src/assets/Computer login-bro.svg" alt="Logo" className="login-img" />
+            <img src="/assets/Computer login-bro.svg" alt="Logo" className="login-img" />
             </div>
         </InputGroup>
     );

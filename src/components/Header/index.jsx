@@ -16,7 +16,7 @@ export default function Header() {
     <Navbar expand="lg" className="shadow-sm px-3 header-box" sticky="top" style={{ backgroundColor: '#274029'}}>
       <Container>
         <Navbar.Brand as={Link} to="/" id="icon-link" className="fw-bold d-flex align-items-center titleheader-box">
-            <img src="./src/assets/restaurant-menu-svgrepo-com.svg"
+            <img src="/assets/restaurant-menu-svgrepo-com.svg"
             alt="Logo"
             width="40"
             height="40"
@@ -43,13 +43,13 @@ export default function Header() {
         <div className="personal-box">
             <Navbar.Brand as={Link} id="type-link" to="/login" className="fw-bold d-flex align-items-center">
             <div className="profile-box">
-              <img className="profile-pic" src="./src/assets/profile-circle-svgrepo-com.svg"/>
+              <img className="profile-pic" src="/assets/profile-circle-svgrepo-com.svg"/>
               <span className="profile-header">Login</span>
             </div>
             </Navbar.Brand>
         <Navbar.Brand as={Link} id="type-link" onClick={abrirCarrinho} className="fw-bold d-flex align-items-center ">
           <div className="profile-box">
-              <img className="profile-pic" src="./src/assets/cart2.svg"/>
+              <img className="profile-pic" src="/assets/cart2.svg"/>
               <span className="profile-header">Carrinho</span>
           </div>
             </Navbar.Brand>
